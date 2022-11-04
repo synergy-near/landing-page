@@ -13,11 +13,11 @@ void main() {
   vec3 pos = position;
   float time = uTime * 10.;
 
-  pos = pos * 2.0;
+  pos = pos * 2.2;
 
-  pos.z += 15.0;
-    pos.x += 15.0;
-  // pos.y -= 6.0;
+  pos.z += 17.0;
+  pos.x += 8.0;
+  pos.y -= 5.0;
 
   pos.x += sin(time + aRandom.x) * 0.04;
   pos.y += sin(time + aRandom.y) * 0.04;

@@ -4,6 +4,18 @@ body {
   background: #242331;
   /* background: #D4E09B; */
   font-family: 'Arvo', serif;
+  font-family: 'Alegreya', serif;
+/* font-family: 'Bubblegum Sans', cursive; */
+/* font-family: 'Cabin', sans-serif; */
+/* font-family: 'EB Garamond', serif; */
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Merriweather', serif; */
+/* font-family: 'Rufina', serif; */
+/* font-family: 'Scope One', serif; */
+/* font-family: 'Space Mono', monospace; */
+ 
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 canvas {
@@ -15,11 +27,17 @@ canvas {
   height: 100%;
 }
 
-.content {
+.main {
   z-index: 1;
+  display: flex;
+}
+
+.content {
+  z-index: 1; 
   width: 40%;
-  margin: 50px;
-  min-height: 4000px;
+  margin: 10px; 
+  margin-left: 10px;
+  /* min-height: 4000px; */
   background: #D6EDFF;
   padding: 20px;
   box-sizing: border-box;
@@ -27,27 +45,84 @@ canvas {
   background: rgba(214,237,255, .1);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-
-
-  border-radius: 20px;
-
-  color: white
+  border-radius: 10px;
+  color: white;
 }
 
 .title {
-  text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
   font-size: 60px;
 }
 
 .subitle {
-  padding-top: 60px;
-  text-align: center;
-  font-size: 25px;
+  padding-top: 30px;
+  font-size: 30px;
 }
 
 .text {
-  text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.subtitle-content {
+  position: fixed;
+  top: 10;
+  right: 10px;
+  width: 30%;
+  height: 80px;
+  /* background-color: #D6EDFF; */
+
+  background: rgba(214, 237, 255, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+}
+
+.subtitle-content .subitle {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.subtitle-content .text {
+  padding-top:  3px;
+  padding-left: 10px; 
   font-size: 17px;
+}
+
+.subtitle-content-2 {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 30%;
+  /* height: 200px; */
+      /* background-color: #D6EDFF; */
+    
+  background: rgba(214, 237, 255, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+}
+
+
+.subtitle-content-2 .text {
+    padding: 10px;
+    font-size: 17px;
+}
+
+.btn {
+  position: fixed;
+  padding: 10px;
+  top: 100;
+  right: 10px;
+  width: 100px;
+  /* background-color: #D6EDFF; */
+
+  background: rgba(214, 237, 255, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
 }

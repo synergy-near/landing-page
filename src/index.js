@@ -57,22 +57,20 @@ Helpers
 /*------------------------------
 Models
 ------------------------------*/
-// const ground = new Model({
-//   name: 'tree',
-//   file: './models/ground.glb',
-//   scene: scene,
-//   resize: 1 / 2.0,
-//   type: "ground"
-// })
+const ground = new Model({
+  name: 'tree',
+  file: './models/ground.glb',
+  scene: scene,
+  type: "ground"
+})
 
 const tree = new Model({
   name: 'tree',
   file: './models/tree.glb',
   scene: scene,
-  resize: 1.0,
   type: "tree"
 })
-
+// camera.updateProjectionMatrix();
 
 /*------------------------------
 Clock

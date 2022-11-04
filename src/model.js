@@ -11,6 +11,8 @@ class Model {
         this.name = obj.name
         this.file = obj.file
         this.scene = obj.scene
+        this.resize = obj.resize
+        this.type = obj.type
 
         this.isAcrive = false
 
@@ -33,7 +35,7 @@ class Model {
             Material Mesh
             ------------------------------*/
             this.material = new THREE.MeshBasicMaterial({
-                color: 'red',
+                color: "#A27035",
                 wireframe: true
             })
 
@@ -64,8 +66,8 @@ class Model {
                         value: new THREE.Color("#A27035")
                     },
                     color2: {
-                        value: new THREE.Color("black")
-                        // value: new THREE.Color("#A27035")
+                        // value: new THREE.Color("black")
+                        value: new THREE.Color("#563F1B")
                     },
                     bboxMin: {
                         value: this.geometry.boundingBox.min
@@ -73,7 +75,8 @@ class Model {
                     bboxMax: {
                         value: this.geometry.boundingBox.max
                     },
-                    uTime: { value: 0 }
+                    uTime: { value: 0 },
+                    resize: { value: this.resize }
                 },
                 vertexShader: vertex,
                 fragmentShader: fragment,
@@ -87,7 +90,7 @@ class Model {
              Particles GEOMETRY
              ------------------------------*/
             const sampler = new MeshSurfaceSampler(this.mesh).build()
-            const numParticles = 10000
+            const numParticles = 300000
 
             this.particlesGeometry = new THREE.BufferGeometry()
             const particlesPosition = new Float32Array(numParticles * 3)
@@ -114,23 +117,13 @@ class Model {
 
             this.particlesGeometry.setAttribute('aRandom', new
                 THREE.BufferAttribute(particlesRandomness, 3))
+
             /*------------------------------
             Particles
             ------------------------------*/
             this.particles = new THREE.Points(
                 this.particlesGeometry, this.particlesMaterial
             )
-
-
-            // console.log(this.mesh.geometry)
-            // console.log(this.mesh.material)
-
-            this.kek = new THREE.Mesh(this.mesh.geometry, this.mesh.material)
-            // this.kek["scale"] = this.mesh["scale"]
-
-            console.log(this.particles)
-            this.kek.scale.set(this.mesh["scale"].x, this.mesh["scale"].y, this.mesh["scale"].z)
-            this.kek.rotation.set(this.mesh["rotation"].x, this.mesh["rotation"].y, this.mesh["rotation"].z)
 
             this.particles.scale.set(this.mesh["scale"].x, this.mesh["scale"].y, this.mesh["scale"].z)
             this.particles.rotation.set(this.mesh["rotation"].x, this.mesh["rotation"].y, this.mesh["rotation"].z)
@@ -140,9 +133,14 @@ class Model {
     }
 
     add() {
-        this.scene.add(this.particles)
         this.isAcrive = true
-        // this.scene.add(this.mesh)
+
+        if (this.type == "ground") {
+            this.mesh.scale.set(0.7, 0.7, 0.7);
+            this.scene.add(this.mesh)
+        } else {
+            this.scene.add(this.particles)
+        }
     }
 }
 

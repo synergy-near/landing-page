@@ -3,6 +3,7 @@ body {
   padding: 0;
   background: #242331;
   /* background: #D4E09B; */
+  font-family: 'Arvo', serif;
 }
 
 canvas {
@@ -15,12 +16,22 @@ canvas {
 }
 
 .content {
+  z-index: 1;
   width: 40%;
   margin: 50px;
   min-height: 4000px;
   background: #D6EDFF;
   padding: 20px;
   box-sizing: border-box;
+
+  background: rgba(214,237,255, .1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+
+
+  border-radius: 20px;
+
+  color: white
 }
 
 .title {

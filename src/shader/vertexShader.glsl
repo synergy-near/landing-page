@@ -15,8 +15,9 @@ void main() {
 
   pos = pos * 2.0;
 
-  pos.z += 13.0;
-  pos.x += 13.0;
+  pos.z += 15.0;
+    pos.x += 15.0;
+  // pos.y -= 6.0;
 
   pos.x += sin(time + aRandom.x) * 0.04;
   pos.y += sin(time + aRandom.y) * 0.04;

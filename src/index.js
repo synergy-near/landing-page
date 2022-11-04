@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Model from './model'
 import gsap from 'gsap';
+// import TweenMax from "gsap/TweenMax";
 
 /*------------------------------
 Renderer
@@ -43,7 +44,7 @@ const cube = new THREE.Mesh(geometry, material);
 OrbitControls
 ------------------------------*/
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enabled = false
+controls.enabled = true
 
 /*------------------------------
 Helpers
@@ -56,10 +57,20 @@ Helpers
 /*------------------------------
 Models
 ------------------------------*/
+// const ground = new Model({
+//   name: 'tree',
+//   file: './models/ground.glb',
+//   scene: scene,
+//   resize: 1 / 2.0,
+//   type: "ground"
+// })
+
 const tree = new Model({
   name: 'tree',
   file: './models/tree.glb',
-  scene: scene
+  scene: scene,
+  resize: 1.0,
+  type: "tree"
 })
 
 
@@ -79,6 +90,10 @@ const animate = function () {
   if (tree.isAcrive) {
     tree.particlesMaterial.uniforms.uTime.value = clock.getElapsedTime()
   }
+
+  // if (ground.isAcrive) {
+  //   ground.particlesMaterial.uniforms.uTime.value = clock.getElapsedTime()
+  // }
 };
 animate();
 
@@ -104,3 +119,8 @@ function onMouseMove(e) {
 }
 
 window.addEventListener('mousemove', onMouseMove)
+
+
+
+
+

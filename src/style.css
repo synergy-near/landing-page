@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000000;
+  background: #242331;
+  /* background: #D4E09B; */
 }
 
 canvas {
@@ -11,4 +12,31 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.content {
+  width: 40%;
+  margin: 50px;
+  min-height: 4000px;
+  background: #D6EDFF;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 60px;
+}
+
+.subitle {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.text {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 17px;
 }

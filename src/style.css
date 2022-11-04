@@ -57,10 +57,12 @@ canvas {
 .subitle {
   padding-top: 30px;
   font-size: 30px;
+  padding-bottom: 13px;
+  border-bottom: 0.5px solid white;
 }
 
 .text {
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 20px;
 }
 
@@ -83,6 +85,8 @@ canvas {
   padding-top: 10px;
   padding-left: 10px;
   font-size: 20px;
+  border-bottom:none;
+  padding-bottom: 0px;
 }
 
 .subtitle-content .text {

@@ -67,11 +67,16 @@ class Model {
                         color1: {
                             // value: new THREE.Color("#D4E09B")
                             // #D4E09B
-                            // value: new THREE.Color("#DDCA7D")
+                            // value: new THREE.Color("#476A6F")
+
+
                             value: new THREE.Color("#A27035")
                         },
                         color2: {
-                            // value: new THREE.Color("black")
+                            // value: new THREE.Color("green")
+                            // value: new THREE.Color("#21897E")
+
+
                             value: new THREE.Color("#563F1B")
                         },
                         bboxMin: {

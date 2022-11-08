@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Model from './model'
 import gsap from 'gsap';
-// import TweenMax from "gsap/TweenMax";
+
 
 /*------------------------------
 Renderer
@@ -27,18 +27,6 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = 5;
 camera.position.y = 1;
-
-
-/*------------------------------
-Mesh
-------------------------------*/
-const geometry = new THREE.BoxGeometry(2, 2, 2);
-const material = new THREE.MeshBasicMaterial({
-  color: 0x00ff00,
-});
-const cube = new THREE.Mesh(geometry, material);
-// scene.add(cube);
-
 
 /*------------------------------
 OrbitControls
@@ -70,13 +58,12 @@ const tree = new Model({
   scene: scene,
   type: "tree"
 })
-// camera.updateProjectionMatrix();
+camera.updateProjectionMatrix();
 
 /*------------------------------
 Clock
 ------------------------------*/
 const clock = new THREE.Clock()
-
 
 /*------------------------------
 Loop

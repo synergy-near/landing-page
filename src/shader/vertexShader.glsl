@@ -16,6 +16,8 @@ void main() {
   pos = pos * 2.2;
 
   pos.z += 17.0;
+
+  // pos.z += 3.0;
   pos.x += 8.0;
   pos.y -= 5.0;
 

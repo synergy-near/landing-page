@@ -1,8 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background: #242331;
+  /* background: #242331; */
   /* background: #D4E09B; */
+ /* background: #1B2845; */
+ /* background: black; */
+ background: #011638;
+ /* background: #2B2D42; */
+/* background: #242331; */
+
   font-family: 'Arvo', serif;
   font-family: 'Alegreya', serif;
 /* font-family: 'Bubblegum Sans', cursive; */
@@ -45,7 +51,7 @@ canvas {
   background: rgba(214,237,255, .1);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
 }
 
@@ -129,4 +135,19 @@ canvas {
   backdrop-filter: blur(10px);
   border-radius: 10px;
   color: white;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list .item {
+  border: 1px white solid;
+  border-radius: 2px;
+  padding: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  /* height: 40px; */
+  
 }
